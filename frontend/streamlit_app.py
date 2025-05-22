@@ -10,7 +10,11 @@ st.title("📱 PhoneGradeAI")
 st.markdown("""
 Welcome to **PhoneGradeAI** – a personal project created for my portfolio to demonstrate how AI can be used to detect **damaged mobile phones** from images.
 
-⚠️ **Note:** This is a hobby project and not intended for commercial or diagnostic use. It may not be accurate in real-world conditions.
+⚠️ **Note:** This is a hobby project and not intended for commercial or diagnostic use.
+
+Real-World Application: This solution can be adapted and embedded into real-world industrial settings, such as phone refurbishment or repair centers. 
+By integrating this model with a camera sensor and a conveyor belt system, companies can automatically assess the physical condition of mobile phones at scale.
+This automation can significantly enhance quality control, speed up processing, and reduce manual inspection errors in high-volume repair facilities.
 
 ---
 
