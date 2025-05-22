@@ -3,7 +3,8 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 import os
 
-MODEL_PATH = os.path.join("model", "phone_grade_model.h5")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "model", "phone_grade_model.h5")
 
 try:
     model = load_model(MODEL_PATH)
