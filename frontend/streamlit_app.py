@@ -1,11 +1,27 @@
 import streamlit as st
 import requests
 
+# Set up page config
 st.set_page_config(page_title="PhoneGradeAI", page_icon="📱")
 
+# Title and project purpose
 st.title("📱 PhoneGradeAI")
-st.markdown("Upload a phone image to check if it's **Good** or **Damaged**.")
 
+st.markdown("""
+Welcome to **PhoneGradeAI** – a personal project created for my portfolio to demonstrate how AI can be used to detect **damaged mobile phones** from images.
+
+⚠️ **Note:** This is a hobby project and not intended for commercial or diagnostic use. It may not be accurate in real-world conditions.
+
+---
+
+### 📸 How to Use:
+1. Take a clear photo of the **mobile phone screen** or find it from web.
+2. Upload the image below (supported formats: `.jpg`, `.png`, `.jpeg`).
+3. Click **"Check Condition"** to see if the phone is classified as **Good** or **Damaged**.
+
+""")
+
+# File upload
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "png", "jpeg"])
 
 if uploaded_file is not None:
@@ -22,4 +38,4 @@ if uploaded_file is not None:
             st.success(f"📋 **Condition:** {result['condition']}")
             st.info(f"📊 **Confidence:** {result['confidence']}%")
         else:
-            st.error("Failed to get prediction from server.")
+            st.error("❌ Failed to get prediction from server. Please try again.")
