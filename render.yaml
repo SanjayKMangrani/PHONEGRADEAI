@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: phonegrade-backend
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python backend/app.py
+    envVars:
+      - key: PORT
+        value: 5000
+
+  - type: web
+    name: phonegrade-frontend
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run frontend/streamlit_app.py --server.port 8000 --server.headless true
