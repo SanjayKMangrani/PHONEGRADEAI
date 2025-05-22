@@ -1,5 +1,6 @@
-﻿tensorflow
-streamlit
 flask
-Pillow
 flask-cors
+tensorflow
+pillow
+numpy
+streamlit
