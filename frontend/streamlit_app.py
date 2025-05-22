@@ -15,7 +15,7 @@ if uploaded_file is not None:
         # Reset the file pointer to start in case it was read by st.image
         uploaded_file.seek(0)
         files = {"image": (uploaded_file.name, uploaded_file, uploaded_file.type)}
-        response = requests.post("http://127.0.0.1:5000/predict", files=files)
+        response = requests.post("https://phonegrade-backend.onrender.com/predict", files=files)
 
         if response.status_code == 200:
             result = response.json()
